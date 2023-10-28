@@ -1,3 +1,4 @@
+/* Reset styles */
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
@@ -5,15 +6,14 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    background-color: #f4f4f4;
-    color: #333;
-    font-size: 16px; /* Base size */
+    background-color: #e6f7ff; /* Light blue background */
+    color: #005599;            /* Deeper blue */
+    font-size: 16px;           /* Base size */
 }
 
 nav {
     background-color: #333;
-    color: #fff;
-    padding: 0.625rem; /* 10px/16px */
+    padding: 0.625rem;        /* 10px/16px */
 }
 
 nav ul {
@@ -22,39 +22,66 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    margin-right: 1.25rem; /* 20px/16px */
+    margin-right: 1.25rem;    /* 20px/16px */
 }
 
 nav ul li a {
-    text-decoration: none;
     color: #fff;
-    padding: 0.3125rem 0.625rem; /* 5px/16px 10px/16px */
-    border: 1px solid transparent;
+    text-decoration: none;
+    padding: 0.3125rem 0.625rem;  /* 5px/16px 10px/16px */
+    border: 2px solid transparent;
     transition: background-color 0.3s;
 }
 
 nav ul li a:hover {
     background-color: #555;
-    border: 1px solid #fff;
+    border: 2px solid #ff0000;
 }
 
 .media-player {
     background-color: #e6e6e6;
-    padding: 1.25rem; /* 20px/16px */
-    margin-top: 1.25rem; /* 20px/16px */
+    padding: 1.25rem;         /* 20px/16px */
+    margin-top: 1.25rem;      /* 20px/16px */
 }
 
 aside .social-media, aside .my-creations {
     background-color: #fff;
-    padding: 1.25rem; /* 20px/16px */
-    margin-top: 1.25rem; /* 20px/16px */
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* 0 2px/16px 4px/16px */
+    padding: 1.25rem;         /* 20px/16px */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* 2px/16px 4px/16px */
 }
 
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1.25rem; /* 20px/16px */
-    margin-top: 1.25rem; /* 20px/16px */
+    padding: 0.8rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #005599;   /* Deeper blue */
+    border-bottom: 2px solid #ff0000; /* Red underline for emphasis */
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+
+a {
+    color: #ff0000;  /* Red */
+    text-decoration: none; /* Removes underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline appears on hover */
+}
+
+button {
+    background-color: #005599;  /* Deeper blue */
+    color: #ff0000;             /* Red text */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #003366;  /* Even deeper blue on hover */
 }
