@@ -1,87 +1,117 @@
-/* Reset styles */
-body, h1, h2, h3, p, ul, li {
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-body {
-    background-color: #e6f7ff; /* Light blue background */
-    color: #005599;            /* Deeper blue */
-    font-size: 16px;           /* Base size */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
 }
 
-nav {
-    background-color: #333;
-    padding: 0.625rem;        /* 10px/16px */
+/* Clear Visual Hierarchy */
+h1, h2, h3, h4, h5 {
+    font-weight: bold;
 }
 
-nav ul {
-    list-style-type: none;
+h1 {
+    font-size: 2.5em;
 }
 
-nav ul li {
-    display: inline-block;
-    margin-right: 1.25rem;    /* 20px/16px */
+h2 {
+    font-size: 2em;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.3125rem 0.625rem;  /* 5px/16px 10px/16px */
-    border: 2px solid transparent;
-    transition: background-color 0.3s;
+h3 {
+    font-size: 1.5em;
 }
 
-nav ul li a:hover {
-    background-color: #555;
-    border: 2px solid #ff0000;
+/* Consistent Color Palette */
+.primary-color {
+    color: #E50914; /* Netflix Red */
 }
 
-.media-player {
-    background-color: #e6e6e6;
-    padding: 1.25rem;         /* 20px/16px */
-    margin-top: 1.25rem;      /* 20px/16px */
+.secondary-color {
+    color: #000; /* Black */
 }
 
-aside .social-media, aside .my-creations {
-    background-color: #fff;
-    padding: 1.25rem;         /* 20px/16px */
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* 2px/16px 4px/16px */
+/* High-Quality Images and Thumbnails */
+.banner {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
+.thumbnail {
+    width: 200px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+}
+
+/* Hover Effects */
+.thumbnail:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+
+/* Cards */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    padding: 16px;
     text-align: center;
-    padding: 0.8rem;
+    background-color: #fff;
+    margin: 20px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #005599;   /* Deeper blue */
-    border-bottom: 2px solid #ff0000; /* Red underline for emphasis */
-    padding-bottom: 10px;
-    margin-top: 20px;
+/* Sticky Navigation Bar */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #000;
+    padding: 10px 0;
+    color: #fff;
+    z-index: 1000;
 }
 
-a {
-    color: #ff0000;  /* Red */
-    text-decoration: none; /* Removes underline */
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-a:hover {
-    text-decoration: underline; /* Underline appears on hover */
+nav a:hover {
+    color: #E50914;
 }
 
-button {
-    background-color: #005599;  /* Deeper blue */
-    color: #ff0000;             /* Red text */
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: 0.3s;
+/* Mobile Responsiveness (Example) */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
 }
 
-button:hover {
-    background-color: #003366;  /* Even deeper blue on hover */
+/* Transitions and Animations */
+.fade-in {
+    animation: fadeIn ease 2s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
 }
